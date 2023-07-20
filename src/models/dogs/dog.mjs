@@ -50,8 +50,4 @@ export class Dog {
          }
       }
    }
-
-   animateText(element) {
-
-   }
 }

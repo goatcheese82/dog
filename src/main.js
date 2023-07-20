@@ -8,8 +8,8 @@ document.querySelector("#breed").addEventListener("click", async e => {
    let dog = new Dog(breed.id, breed.name, breed.weight, breed.height, breed.life_span, breed.bred_for, breed.breed_group, breed.temperament)
    let image = await getImage(breed.reference_image_id);
    dog.setImage(image);
-   dog.renderDetails();
    setLocalStorage("dog", breed);
+   dog.renderDetails();
 })
 
 let breedList = await getBreeds();

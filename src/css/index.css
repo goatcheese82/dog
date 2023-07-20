@@ -79,6 +79,7 @@ img {
 #dog-info {
    background-color: whitesmoke;
    margin: 2%;
+   overflow: auto;
 }
 
 @keyframes image-in {
