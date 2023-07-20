@@ -1,3 +1,0 @@
-const getDog = async dogName => {
-    
-}

@@ -1,19 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dog App</title>
-  </head>
-  <body>
-    <main>
-      <section>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="css/index.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dog App</title>
+</head>
+
+<body>
+  <header>
+
+  </header>
+  <main>
+    <section id="dog-finder">
+      <div id="dog-selector">
         <label for="breedSelect" name="breeds">Find your dog!</label>
         <select id="breedSelect"></select>
-        <div id="show-dog">
-          <h2 id="dog-name"></h2>
-          <img id="dog-image">
+        <button type="submit" id="breed">Get Breed</button>
+      </div>
+      <div id="show-dog">
+        <h2 id="dog-name"></h2>
+        <img id="dog-image">
+        <div id="dog-info">
           <p id="breed-group"></p>
           <p id="bred-for"></p>
           <p id="height"></p>
@@ -21,10 +30,13 @@
           <p id="temperament"></p>
           <p id="life-span"></p>
         </div>
-      </section>
-    </main>
-    
-    <button type="submit" id="breed">Get Breed</button>
-    <script type="module" src="main.js"></script>
-  </body>
+      </div>
+    </section>
+  </main>
+  <footer>
+
+  </footer>
+  <script type="module" src="main.js"></script>
+</body>
+
 </html>

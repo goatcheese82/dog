@@ -8,7 +8,7 @@ export class Dog {
       this.height = height;
       this.life_span = life_span;
       this.bred_for = bred_for;
-      this. breed_group = breed_group;
+      this.breed_group = breed_group;
       this.temperament = temperament;
       this.image_url;
    }
@@ -29,7 +29,29 @@ export class Dog {
    }
 
    renderImage() {
-      document.querySelector("#dog-image").src = this.image_url;
-      document.querySelector("#dog-image").alt = this.name;
+      let image = document.querySelector("#dog-image");
+      image.src = this.image_url;
+      image.alt = this.name;
+      this.animateImage(image);
+   }
+
+   animateImage(element) {
+      let radius = 100;
+      let size = 0;
+      let id = setInterval(imageIn, 3);
+      function imageIn() {
+         if (radius == 0) {
+            clearInterval(id);
+         } else {
+            radius--;
+            size++;
+            element.style.borderRadius = `${radius}%`;
+            element.style.width = `${size}%`;
+         }
+      }
+   }
+
+   animateText(element) {
+
    }
 }

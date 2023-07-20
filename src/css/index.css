@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap');
+
+:root {
+   --font-body: Caveat, cursive, sans-serif;
+   --primary-color: rgb(218, 169, 105);
+   --secondary-color: rgba(2,2,2, .5);
+   --font-small: 1em;
+   --font-medium: 1.2em;
+   --font-large: 1.5em;
+}
+
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
+body {
+   background-color: var(--primary-color);
+   margin: 0;
+   font-family: var(--font-body);
+   font-size: var(--font-large);
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   grid-template-rows: 10% 80% 10%;
+   height: 100vh;
+}
+
+header {
+   grid-row: 1;
+   grid-column: 1 / span 3;
+}
+
+main {
+   background-color: var(--secondary-color);
+   grid-row: 2;
+   grid-column: 2;
+}
+
+footer {
+   grid-row: 3;
+   grid-column: 2;
+}
+
+h2 {
+   color: whitesmoke;
+   padding: 2%;
+   text-decoration-line: underline;
+   text-decoration-color: var(--primary-color);
+}
+
+img {
+   max-width: 96%;
+   max-height: 100%;
+   width: 100%;
+   margin: auto;
+   animation: image-in 2s;
+}
+
+#dog-finder {
+   display: grid;
+   grid-template-columns: 1fr;
+   grid-template-rows: 10% 90%;
+   height: 100%;
+}
+
+#dog-selector {
+   z-index: 999;
+   background-color: whitesmoke;
+   margin: 2%;
+}
+
+#show-dog {
+   height: 100%;
+   display: grid;
+   grid-template-rows: 10% 60% 30%;
+}
+
+#dog-info {
+   background-color: whitesmoke;
+   margin: 2%;
+}
+
+@keyframes image-in {
+   0% {
+      border-radius: 100%;
+   }
+   100% {
+      border-radius: 0;
+   }
+}
