@@ -15,6 +15,7 @@ document.querySelector("#breed").addEventListener("click", async e => {
 let breedList = await getBreeds();
 
 let selectTag = document.querySelector("#breedSelect");
+console.log(breedList)
 breedList.map( breed => {
    let option = document.createElement("option");
    option.value = breed.id;
